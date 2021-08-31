@@ -1,0 +1,9 @@
+.content
+{
+    background-color: rgba(248, 248, 248, 0.637);
+    overflow-y: scroll;
+    scrollbar-width: none; 
+}
+.content:-webkit-scrollbar {
+    display: none;
+  }

@@ -1,0 +1,30 @@
+.card__section
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+}
+.card
+{
+    text-align: center;
+    overflow: hidden;
+    transition:.4s ease
+}
+.card--image
+{
+width: 125px;
+transition: .3s ease-in-out;
+ 
+}
+.card--image:hover
+{
+    width: 135px;
+}
+.bubble
+{
+    background-color: #ffdf772c;
+    border-radius:50%;
+    width: 125px;
+    height: 118px;
+
+}

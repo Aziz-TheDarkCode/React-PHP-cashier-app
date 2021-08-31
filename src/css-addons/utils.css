@@ -1,0 +1,84 @@
+.active{
+    background-color: #ff265d;
+    color: white;
+    box-shadow: 0 .125rem .25rem #ff265c67 !important;
+}
+.rounded-box
+{
+    border-radius: 16px;
+}
+.type-1
+{
+    height: 5.5rem;
+    transition: 0.5s ease-in-out;
+}
+.bg-white
+{
+    background-color: white;
+}
+.text-bolder
+{
+    font-weight: bold;
+}
+.text-larger
+{
+    font-size:x-large;
+}
+input[type=text]
+{
+    border : none;
+    background-color: white;
+    padding: .9rem;
+    width: 20rem;
+    border-radius: 2rem;
+}
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+.categories
+{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(7,1fr);
+}
+.bordered
+{
+    border: 1px rgba(128, 128, 128, 0.219) solid;
+    border-radius: .5rem;
+    padding: .7rem;
+    background-color: white;
+    text-align: center;
+}
+.gray-text{
+    color:rgba(128, 128, 128, 0.39);
+}
+
+.type-2
+{
+    background-color: white;
+    width: 5rem;
+    color: rgba(0, 0, 0, 0.692) ;
+    height: 6rem;
+    text-align: center;
+    transition: .5s ease;
+}
+.active-category
+{
+    background-color: #ffdf77;
+}
+.pos-relative
+{
+    position: relative;
+}
+.pos-absolute
+{
+    position: absolute;
+}
+.text-center
+{
+    text-align: center;
+}
+.bordered-bottom
+{
+    border-bottom: 1.2px solid rgba(128, 128, 128, 0.137);
+}

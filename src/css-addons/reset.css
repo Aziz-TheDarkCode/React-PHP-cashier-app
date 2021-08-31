@@ -1,0 +1,21 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-size: 14px;
+    overflow: hidden;
+    font-family: "Space Grotesk";
+}
+.container
+{
+    width: 100%;
+    margin: 0 auto;
+}
+.medium
+{
+    font-size: 25px;
+}
