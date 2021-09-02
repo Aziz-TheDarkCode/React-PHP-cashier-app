@@ -10,7 +10,7 @@
 .type-1
 {
     height: 5.5rem;
-    transition: 0.5s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 .bg-white
 {
@@ -24,17 +24,7 @@
 {
     font-size:x-large;
 }
-input[type=text]
-{
-    border : none;
-    background-color: white;
-    padding: .9rem;
-    width: 20rem;
-    border-radius: 2rem;
-}
-input:focus, textarea:focus, select:focus{
-    outline: none;
-}
+
 .categories
 {
     display: grid;
@@ -52,7 +42,14 @@ input:focus, textarea:focus, select:focus{
 .gray-text{
     color:rgba(128, 128, 128, 0.39);
 }
-
+.text-primary
+{
+    color: #ff265d;
+}
+.h-100
+{
+    height: 100%;
+}
 .type-2
 {
     background-color: white;
@@ -81,4 +78,20 @@ input:focus, textarea:focus, select:focus{
 .bordered-bottom
 {
     border-bottom: 1.2px solid rgba(128, 128, 128, 0.137);
+}
+.on-bottom
+{
+    bottom: 1.5rem;
+    left: 4.5rem;
+}
+.circular-box
+{
+    border-radius: 50%;
+    height: 03rem;
+    width: 03rem;
+}
+.bg-primary
+{
+    background-color: #ff265d;
+    color: white;
 }

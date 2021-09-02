@@ -1,19 +1,5 @@
 .invoice
 {
-    font-family: "Merchant Copy";
-    font-size: 22px;
+    
 }
-.btn
-{
-    background-color: #ff265d;
-    width: 10rem;
-    padding: 1rem;
-    border-radius: 1rem;
-    color: white;
-    bottom: 1.5rem;
-    left: 4.5rem;
-    text-align: center;
-    cursor: pointer;
-    font-size: 13px;
-    font-family: "Space Grotesk";
-}
+

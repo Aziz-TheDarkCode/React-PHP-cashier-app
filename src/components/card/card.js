@@ -1,9 +1,6 @@
 import "./card.css"
 export default function Card({image,title,price,cart,setCart}) 
 {
-    const CheckCart = () =>{
-       
-    }
     const addCart = ()=>{
      
         let filter = cart.filter(prod=>prod.name===title)

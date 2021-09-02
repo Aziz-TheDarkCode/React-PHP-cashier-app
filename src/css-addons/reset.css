@@ -12,10 +12,25 @@ body
 }
 .container
 {
-    width: 100%;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: .4fr 3fr 1fr;
+    height: 100vh;
 }
+.content
+{
+    overflow-y: scroll;
+    scrollbar-width: none;
+    background-color: rgba(248, 248, 248, 0.637);
+}
+.content:-webkit-scrollbar {
+    display: none;
+  }
 .medium
 {
     font-size: 25px;
+}
+a
+{
+    text-decoration: none;
+    color: rgba(128, 128, 128, 0.185);
 }

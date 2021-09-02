@@ -1,5 +1,8 @@
-const Settings =()=>{
+export default function Settings() 
+{
     return(
-        <h1>Settings</h1>
-    )
+        <div className="content p-4">
+            <p className="text-larger text-bolder">Settings</p>
+        </div>
+    )    
 }
