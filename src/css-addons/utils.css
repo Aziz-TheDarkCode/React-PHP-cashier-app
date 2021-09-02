@@ -90,8 +90,31 @@
     height: 03rem;
     width: 03rem;
 }
+.sm-circular-box
+{
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.text-secondary
+{
+    color: #ffdf77;
+}
+.pointer
+{
+    cursor: pointer;
+}
+.red-border
+{
+    border: 2px red solid;
+}
 .bg-primary
 {
     background-color: #ff265d;
+    color: white;
+}
+.bg-secondary
+{
+    background-color:#ffdf77;
     color: white;
 }

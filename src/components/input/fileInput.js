@@ -16,15 +16,13 @@ export default function Fileinput()
         }
      },[])    
     return(
-        <div className="mt-3 file-upload">
-            <div onclick={()=>{
-                document.getElementById("file-upload-input")[0].click()
-            }} onChange={()=>{
-
-            }} className="file-upload-select">
+        <div onchange={()=>{
+            alert("changed")
+        }} className="py-3 file-upload">
+            <div className="mt-4 file-upload-select">
 		        <div className="file-select-button" >Choisir image</div>
                 <div className="file-select-name">Pas  de fichier selectionné...</div> 
-                <input type="file" name="file-upload-input" id="file-upload-input"></input>
+                <input className="p-5" type="file" name="img" id="file-upload-input"></input>
             </div>
         </div>
     )    

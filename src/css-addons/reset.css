@@ -22,7 +22,7 @@ body
     scrollbar-width: none;
     background-color: rgba(248, 248, 248, 0.637);
 }
-.content:-webkit-scrollbar {
+.content::-webkit-scrollbar {
     display: none;
   }
 .medium

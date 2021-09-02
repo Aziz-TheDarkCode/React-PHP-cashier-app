@@ -1,4 +1,6 @@
 import { useEffect, useState,} from "react"
+import { FaBroom } from "react-icons/fa"
+import {IoMdClose} from "react-icons/io"
 import Button from "../button/button"
 import "./invoice.css"
 export default function Invoice({cart,setCart}) {
@@ -20,13 +22,20 @@ export default function Invoice({cart,setCart}) {
        setTotalPrice(amount())
     },[amount()])     
              return(
+                
         <div className='bg-white invoice pos-relative'>
+          
              { cart.length!==0 &&   <div>
            <div className='text-center py-3'>
             <h3>Restaurant Le Darkcode</h3>
             <small >Dakar,Cité Douanes</small>
             </div>
-            <p>Date : </p>
+            <div  onClick={()=>{
+                setCart([])
+            }} className=' pointer d-flex align-items-center text-secondary'>
+            <FaBroom  className=" mr-1 p-1 sm-circular-box bg-secondary"/>
+            <small>Vider panier</small>
+            </div>
             <table className="mt-3 col-12 text-center bordered-bottom">
                 <thead>
                     <th>#</th>
@@ -55,8 +64,8 @@ export default function Invoice({cart,setCart}) {
                 <Button type="primary" text="Imprimer facture"/>
             </div>
            </div>}
-             { cart.length===0 &&  <div className="gray-text d-flex align-items-center justify-content-center h-100"><p>Le panier est vide</p></div>}
- 
+             { cart.length===0 && <div className=" text-center gray-text d-flex align-items-center justify-content-center h-100"><p>Merci d'ajouter des produits pour voir la facture</p></div>
+             }
             
         </div>
     )

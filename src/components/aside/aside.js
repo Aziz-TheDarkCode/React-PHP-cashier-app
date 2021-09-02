@@ -11,7 +11,7 @@ export default function Aside() {
     return(
             <div className="bg-white aside p-3">
                 <NavLink  exact activeStyle={active} to="/">
-                    <NavLinks icon={<AiOutlineShop/>} title="Acceil" state="active" type='type-1'/>
+                    <NavLinks icon={<AiOutlineShop/>} title="Acceuil"  type='type-1'/>
                 </NavLink>
                 <NavLink exact activeStyle={active} to="/dashboard">
                     <NavLinks icon={<RiDashboardLine/>} title="Dashboard" type='type-1'/>

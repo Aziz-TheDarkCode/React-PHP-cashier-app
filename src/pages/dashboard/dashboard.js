@@ -8,13 +8,14 @@ export default function Message (){
         <div className="content p-4">
             <div className="d-flex justify-content-between align-items-center">
                 <p className="text-larger text-bolder">Dashboard</p>
-                <Link to="/newproduct">
+                <Link exact to="/newproduct">
                     <Button text="Ajouter un produit" type="primary"/>
                 </Link>
             </div>
-              <Route path="/newproduct">
+                <Route path="/newproduct">
                   <NewProduct/>
-              </Route>  
+                </Route>
+          
         </div>
         </Router>
     )

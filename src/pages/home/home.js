@@ -8,16 +8,18 @@ import Input from "../../components/input/input";
 export default function Home({recipes,setRecipes,cart,setCart}) {
     let [filteredRecipes,setFilteredRecipes] = useState([])
    useEffect(()=>{
-    fetch('./recipe.json').then(
-        (res) => res.json()).then(
-            (data) => {
-                setRecipes(data.menu)
-                setFilteredRecipes(data.menu)
-      }).catch((err)=>{
-          console.log(err)
-      })
+    setTimeout(() => {
+        fetch('./recipe.json').then(
+            (res) => res.json()).then(
+                (data) => {
+                    setRecipes(data.menu)
+                    setFilteredRecipes(data.menu)
+          }).catch((err)=>{
+              console.log(err)
+          })
+       }, 2000);    
    },[])
-   console.log(recipes)
+   
     return(
         <div className='content p-4'>
             <header className="d-flex justify-content-between align-items-center">

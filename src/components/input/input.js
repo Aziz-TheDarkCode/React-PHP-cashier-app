@@ -1,11 +1,11 @@
 import "./input.css"
 
-export default function Input({label,placeholder,type}) 
+export default function Input({label,placeholder,type,name,onblur}) 
 {
     return(
-        <div className="d-flex flex-column gray-text">
+        <div className=" input d-flex flex-column gray-text">
             <label className="py-2 ml-2">{label}</label>
-            <input type={type} className="input-text" placeholder={placeholder}/>
+            <input  onBlur={onblur} name={name} type={type} className="input-text" placeholder={placeholder}/>
         </div>
     )    
 }

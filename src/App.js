@@ -5,8 +5,10 @@ import Home from "./pages/home/home";
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import Dashboard from "./pages/dashboard/dashboard";
 import Settings from "./pages/settings/settings";
+import NewProduct from "./pages/dashboard/addProduct/addProduct";
 
 function App() {
+    
     const [cart,setCart] = useState([])
     const [recipes,setRecipes] = useState([])
   return (
@@ -16,7 +18,7 @@ function App() {
        <Switch>
           <Route  path="/dashboard">
               <Dashboard  cart={cart} setCart={setCart}/>
-          </Route>
+          </Route>  
           <Route   path="/settings" >
               <Settings/>
           </Route>
