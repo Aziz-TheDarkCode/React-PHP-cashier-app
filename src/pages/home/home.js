@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import Card from "../../components/card/card";
 import Category from "../../components/navlinks/category";
 import Input from "../../components/input/input";
+import Loader from "../../components/loader/loader";
 
 export default function Home({recipes,setRecipes,cart,setCart}) {
     let [filteredRecipes,setFilteredRecipes] = useState([])
@@ -17,9 +18,9 @@ export default function Home({recipes,setRecipes,cart,setCart}) {
           }).catch((err)=>{
               console.log(err)
           })
-       }, 2000);    
+       }, 10000);    
    },[])
-   
+  
     return(
         <div className='content p-4'>
             <header className="d-flex justify-content-between align-items-center">
@@ -27,7 +28,7 @@ export default function Home({recipes,setRecipes,cart,setCart}) {
                     <span className="text-bolder">Menu</span>
                     <span> De commande</span>
                 </div>
-               <Input placeholder="Rechercher des aliments , du café...."/>
+               <Input  placeholder="Rechercher des aliments , du café...."/>
             </header>
             <div className="d-flex categories py-3">
                  <Category recipes={recipes} setRecipes={setRecipes} filteredRrecipes={filteredRecipes} setFilteredRecipes={setFilteredRecipes} icon={<IoFastFoodOutline/>}  title="Tout"/>
@@ -41,6 +42,7 @@ export default function Home({recipes,setRecipes,cart,setCart}) {
             </div>
             <section className="mt-4">
                 <h1 className="card__section--title mb-3">Produits</h1>
+                    {recipes.length===0 && <Loader/>}
                 <div className="card__section">
                   { filteredRecipes.length===0 && recipes.map(recipe=>{
                        return <Card cart={cart} setCart={setCart} image={recipe.img} title={recipe.name} price={recipe.price}/>

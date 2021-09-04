@@ -50,6 +50,29 @@
 {
     height: 100%;
 }
+.w-100
+{
+    width: 100vw;
+}
+.little-square
+{
+    width: .3rem;
+    height: .3rem;
+    justify-content: b;
+}
+.green
+{
+    background-color: #4fc174;
+}
+.red
+{
+    background-color: #f83852;
+}
+.yellow
+{
+    background-color: #ffff00c4;
+}
+
 .type-2
 {
     background-color: white;

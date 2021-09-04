@@ -1,0 +1,38 @@
+.bar
+{
+    width:100%;
+    border-radius: 5rem;
+}
+.sufficient
+{
+    height: 0.3em;
+    background-color: rgba(28, 197, 28, 0.11);
+    border-radius: 1rem;
+}
+.sufficient-fill
+{
+    background-color: #4fc174;
+    width: 95%;
+}
+.med
+{
+    height: 0.3em;
+    background-color: #ffff0021;
+    border-radius: 1rem;
+}
+.med-fill
+{
+    background-color: #ffff0057;
+    width: 50%;
+}
+.weak
+{
+    height: 0.3em;
+    background-color: #f70e0e33;
+    border-radius: 1rem;
+}
+.weak-fill
+{
+    background-color: #f8385298;
+    width: 25%;
+}

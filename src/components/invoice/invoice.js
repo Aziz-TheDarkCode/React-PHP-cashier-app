@@ -1,8 +1,11 @@
 import { useEffect, useState,} from "react"
 import { FaBroom } from "react-icons/fa"
-import {IoMdClose} from "react-icons/io"
 import Button from "../button/button"
 import "./invoice.css"
+import * as htmlToImage from 'html-to-image';
+import { toPng, toJpeg, toBlob, toPixelData, toSvg } from 'html-to-image';
+
+
 export default function Invoice({cart,setCart}) {
     let [totalPrice,setTotalPrice]=useState(0)
     
@@ -13,7 +16,6 @@ export default function Invoice({cart,setCart}) {
         },[]).reduce((total,n)=>{
             return total+=n
         },0)
-        console.log(sum)
         return sum
     }
     useEffect(()=>{
@@ -36,7 +38,7 @@ export default function Invoice({cart,setCart}) {
             <FaBroom  className=" mr-1 p-1 sm-circular-box bg-secondary"/>
             <small>Vider panier</small>
             </div>
-            <table className="mt-3 col-12 text-center bordered-bottom">
+            <table style={{borderSpacing:"10px"}} className="mt-3 col-12 text-center bordered-bottom">
                 <thead>
                     <th>#</th>
                     <th>Designation</th>
@@ -61,7 +63,7 @@ export default function Invoice({cart,setCart}) {
             <h3 className='mt-2 gray-text'>{totalPrice} FCFA</h3>
             </div>
             <div className="btn mt-5 mx-auto">
-                <Button type="primary" text="Imprimer facture"/>
+                <Button   type="primary" text="Imprimer facture"/>
             </div>
            </div>}
              { cart.length===0 && <div className=" text-center gray-text d-flex align-items-center justify-content-center h-100"><p>Merci d'ajouter des produits pour voir la facture</p></div>

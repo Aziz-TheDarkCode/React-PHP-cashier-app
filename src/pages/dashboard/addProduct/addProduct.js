@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { MdKeyboardArrowLeft } from "react-icons/md";
+import { Link } from "react-router-dom";
+
 import Button from "../../../components/button/button";
 import Checkbox from "../../../components/input/checkbox";
 import Fileinput from "../../../components/input/fileInput";
@@ -20,9 +23,12 @@ export default function NewProduct ()
     }
     return(
         <div>
-            <p onClick={()=>{
+            <Link to="/dashboard">
+            <MdKeyboardArrowLeft className="text-larger"/>
+            </Link>
+            <h3 onClick={()=>{
                 console.log(submittedData)
-            }} className="mb-4">Ajout d'un produit</p>
+            }} className="mt-2">Ajout d'un produit</h3>
             <div className='input__section'>
                 <Input onblur={handler} name="productName" label="Designation"/>
                 <Input  onblur={handler} name="price" label="Prix"/>

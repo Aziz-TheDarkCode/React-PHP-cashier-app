@@ -6,7 +6,7 @@
             "price" : 4000,
             "category" : "Pizza",
             "img" :"https://i.ya-webdesign.com/images/chicago-connection-pizza-png-19.png",
-            "quantity": 9       
+            "quantity": 22       
         },
         {
             "name" : "Présséa Nectar Cocktail",
@@ -21,7 +21,7 @@
             "price" : 400,
             "category" : "Snack",
             "img" :"https://www.vippng.com/png/detail/49-499717_everything-you-love-about-goldfish-goldfish-flavor-blasted.png",
-            "quantity": 8         
+            "quantity": 52         
         },
         {
             "name" : "Ananas",
@@ -58,7 +58,7 @@
             "price" : 350,
             "category" : "Boisson",
             "img" :"https://pluspng.com/img-png/coca-cola-355ml-2000.png",
-            "quantity": 4        
+            "quantity": 64        
         },
         {
             "name" : "Burger Simple",

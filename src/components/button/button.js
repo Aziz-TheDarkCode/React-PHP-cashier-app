@@ -1,7 +1,7 @@
 import "./button.css"
-export default function Button({text,type}) 
+export default function Button({text,type,onclick}) 
 {
     return(
-        <div className={`btn btn-${type}`}>{text}</div>
+        <div onClick={onclick} className={`btn btn-${type}`}>{text}</div>
     )    
 }

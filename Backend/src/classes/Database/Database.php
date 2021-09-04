@@ -13,7 +13,7 @@ class Database
        private $user ="root";
        private $host ="localhost";
        private $password ="";
-       private $database ="cashier";
+       private $database ="cashier-app";
        
        private $connection;
 

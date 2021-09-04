@@ -5,7 +5,6 @@ import Home from "./pages/home/home";
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import Dashboard from "./pages/dashboard/dashboard";
 import Settings from "./pages/settings/settings";
-import NewProduct from "./pages/dashboard/addProduct/addProduct";
 
 function App() {
     
@@ -17,13 +16,13 @@ function App() {
         <Aside cart={cart} setCart={setCart}/>
        <Switch>
           <Route  path="/dashboard">
-              <Dashboard  cart={cart} setCart={setCart}/>
+              <Dashboard  recipes={recipes} setRecipes={setRecipes}/>
           </Route>  
           <Route   path="/settings" >
               <Settings/>
           </Route>
           <Route path="/" >
-              <Home recipes = {recipes}  setRecipes = {setRecipes}cart={cart} setCart={setCart}/>
+              <Home recipes = {recipes}  setRecipes = {setRecipes} cart={cart} setCart={setCart}/>
           </Route>
        </Switch>
         <Invoice cart={cart} setCart={setCart}/>  

@@ -13,12 +13,11 @@ export default function Fileinput()
             let filename = fileInput.files[0].name;
             let selectName = document.getElementsByClassName("file-select-name")[0];
             selectName.innerText = filename;
+        
         }
      },[])    
     return(
-        <div onchange={()=>{
-            alert("changed")
-        }} className="py-3 file-upload">
+        <div className="py-3 file-upload">
             <div className="mt-4 file-upload-select">
 		        <div className="file-select-button" >Choisir image</div>
                 <div className="file-select-name">Pas  de fichier selectionné...</div> 
