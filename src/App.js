@@ -5,11 +5,26 @@ import Home from "./pages/home/home";
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import Dashboard from "./pages/dashboard/dashboard";
 import Settings from "./pages/settings/settings";
+import {useEffect} from 'react'
 
 function App() {
-    
+
+  let [filteredRecipes,setFilteredRecipes] = useState([])
     const [cart,setCart] = useState([])
     const [recipes,setRecipes] = useState([])
+    useEffect(()=>{
+      setTimeout(() => {
+          fetch('http://localhost:3500/GET/Product/all-products.php').then(
+              (res) => res.json()).then(
+                  (data) => {
+                      setRecipes(data)
+                      setFilteredRecipes(data)
+                      console.log(data)
+            }).catch((err)=>{
+                console.log(err)
+            })
+         }, 1);    
+     },[])
   return (
     <Router>
       <div className="container page-content">
@@ -22,7 +37,7 @@ function App() {
               <Settings/>
           </Route>
           <Route path="/" >
-              <Home recipes = {recipes}  setRecipes = {setRecipes} cart={cart} setCart={setCart}/>
+              <Home filteredRecipes={filteredRecipes} setFilteredRecipes={setFilteredRecipes} recipes = {recipes}  setRecipes = {setRecipes} cart={cart} setCart={setCart}/>
           </Route>
        </Switch>
         <Invoice cart={cart} setCart={setCart}/>  

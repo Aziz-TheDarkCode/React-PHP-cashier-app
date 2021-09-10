@@ -8,7 +8,7 @@ export default function Card({image,title,price,cart,setCart})
         {      
         setCart([...cart,{
             "name" :title,
-            "price" : price,
+            "price" : eval(price),
             "qty" : 1
         }])            
         }else

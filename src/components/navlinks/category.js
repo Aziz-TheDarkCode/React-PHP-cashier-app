@@ -3,8 +3,9 @@
 export  default function Category({icon,title,state,recipes,setRecipes ,filteredRecipes ,setFilteredRecipes}) 
 {
     function chooseCategory(e) { 
-        let filter = recipes.filter(recipe=>recipe.category===title)
+        let filter = recipes.filter(recipe=>recipe.categoryName===title)
         setFilteredRecipes(filter)
+        console.log(filter)
         document.querySelectorAll(".category").forEach(link => {
             link.classList.remove("active-category")
         });

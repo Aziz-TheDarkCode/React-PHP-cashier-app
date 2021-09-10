@@ -3,6 +3,7 @@ import {AiOutlineDelete, GrAdd} from 'react-icons/all'
 import {BrowserRouter as Router, Route,NavLink, Link} from 'react-router-dom'
 import Bar from '../../components/bar/bar'
 import Button from '../../components/button/button'
+import Skeleton from '../../components/skeleton/skeleton'
 import NewProduct from './addProduct/addProduct'
 export default function Dashboard ({recipes,setRecipes}){
     return(
@@ -41,19 +42,13 @@ export default function Dashboard ({recipes,setRecipes}){
                     <th>Quantity</th>
                 </thead>
                 <tbody>
-                {recipes.map(prod=>{
+
+                    {recipes.length !== 0 && recipes.map(prod=>{
                         return(
                             <tr className='p-5'>
 
-                                <td  onClick={()=>{
-                                    let selectProduct ={
-                                        'productName' : prod.name,
-                                        'price' : prod.price,
-                                        'category' : prod.category,
-                                    }
-                                    console.log(selectProduct)
-                                }} className='pointer text-primary text-bolder'><AiOutlineDelete/></td>
-                                <td>{prod.name}</td>
+                                <td className='pointer text-primary text-bolder'><AiOutlineDelete/></td>
+                                <td>{prod.productName}</td>
                                 <td>{prod.price}</td>
                                 {prod.quantity <10 && prod.quantity<=20 && <Bar state='weak' value={prod.quantity}/>}
                                 {prod.quantity >=21 && prod.quantity<=50 && prod.quantity && <Bar state='med' value={prod.quantity}/>}
@@ -62,7 +57,63 @@ export default function Dashboard ({recipes,setRecipes}){
                                 
                             </tr>
                         )
-                    })}
+                    }) }
+                    {recipes.length===0 && 
+                      <>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                      </>
+                    }
+                     
                 </tbody>
             </table>
             </Route>

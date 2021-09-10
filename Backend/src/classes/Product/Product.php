@@ -8,8 +8,11 @@ class Product
     private $conn;
     private $table ="product";
 
-    public $id ;
+    public $productName;
     public $category;
+    public $price;
+    public $quantity;
+    public $img;
 
     public function __construct($db)
     {
@@ -20,37 +23,38 @@ class Product
     public function getProduct($query)
     {
        
-        // $query ="SELECT * FROM $this->table";
-
         $stmt = $this->conn->prepare($query);
 
         $stmt->execute();
 
         return $stmt;
     }
-
-    public function getSingleProduct()
+    public function createProduct()
     {
-        $query ="SELECT * FROM $this->table WHERE productID =:id";
+        $query = 'INSERT INTO ' . $this->table . ' SET productName = :productname, category = :category, price = :price, img = :img, quantity=:quantity';
+        
         $stmt = $this->conn->prepare($query);
 
-        $stmt->bindValue(":id",$this->id);
-        $stmt->execute();
+        $this->productName = htmlspecialchars(strip_tags($this->productName));
+        $this->category = htmlspecialchars(strip_tags($this->category));
+        $this->price = htmlspecialchars(strip_tags($this->price));
+        $this->img = htmlspecialchars(strip_tags($this->img));
+        $this->quantity = htmlspecialchars(strip_tags($this->quantity));
         
-        return $stmt;
-    }
-
-    public function getProductByCategory()
-    {
-        $query ="SELECT * FROM $this->table WHERE category =:category";
-        $stmt = $this->conn->prepare($query);
-
-        $stmt->bindValue(":category",$this->category);
-        $stmt->execute();
+        $stmt->bindParam(':productname' , $this->productName);
+	    $stmt->bindParam(':category' , $this->category);
+	    $stmt->bindParam(':price' , $this->price);
+	    $stmt->bindParam(':img' , $this->img);
+	    $stmt->bindParam(':quantity' , $this->quantity);
         
-        return $stmt;
-
+        if($stmt->execute()) {
+            return true;
+        }
+    
+        // Print error if something goes wrong
+        printf("Error: %s.\n", $stmt->error);
+    
+        return false;       
+    }
     }
 
-
-    }

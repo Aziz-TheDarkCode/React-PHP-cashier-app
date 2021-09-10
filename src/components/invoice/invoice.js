@@ -19,7 +19,6 @@ export default function Invoice({cart,setCart}) {
         return sum
     }
     useEffect(()=>{
-    //    cart.length===0 ? document.querySelector(".btn").style.display="none"  : document.querySelector(".btn").style.display="block"       
         amount()
        setTotalPrice(amount())
     },[amount()])     

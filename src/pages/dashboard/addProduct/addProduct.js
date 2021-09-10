@@ -14,6 +14,8 @@ export default function NewProduct ()
         if(e.target.value!=='') {
             setSubmittedData({...submittedData,[e.target.name] : e.target.value})
             e.target.classList.remove("red-border")
+            // return submittedData
+
         }else
         {
             e.target.classList.add("red-border")
@@ -21,6 +23,19 @@ export default function NewProduct ()
         }
 
     }
+    const submit =()=>{
+
+        console.log(submittedData)
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(submittedData)
+        };
+        fetch("http://localhost:3500/POST/Product/add-product.php", requestOptions)
+        .then(response => response.json())
+        .then(data => console.log(data));
+    }
+
     return(
         <div>
             <Link to="/dashboard">
@@ -33,7 +48,8 @@ export default function NewProduct ()
                 <Input onblur={handler} name="productName" label="Designation"/>
                 <Input  onblur={handler} name="price" label="Prix"/>
                 <Input  onblur={handler}  name="quantity" label="Quantité" type="number"/>
-                <Fileinput/>
+                <Input  onblur={handler}  name="img" label="Url de l'image" type="text"/>
+                
             </div>
                 <div className='mt-5'>
                 <Checkbox onclick={handler} text="Pizza" value='1'/>
@@ -45,7 +61,7 @@ export default function NewProduct ()
                 <Checkbox onclick={handler} text="Boisson" value='7'/>
                 </div>
             <div className="mt-5 col-3 mx-auto">
-                <Button  text="Ajouter" type="primary"/>
+                <Button onclick={submit} text="Ajouter" type="primary"/>
             </div>
         </div>
     )   

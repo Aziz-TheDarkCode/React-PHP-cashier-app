@@ -6,20 +6,7 @@ import Category from "../../components/navlinks/category";
 import Input from "../../components/input/input";
 import Loader from "../../components/loader/loader";
 
-export default function Home({recipes,setRecipes,cart,setCart}) {
-    let [filteredRecipes,setFilteredRecipes] = useState([])
-   useEffect(()=>{
-    setTimeout(() => {
-        fetch('./recipe.json').then(
-            (res) => res.json()).then(
-                (data) => {
-                    setRecipes(data.menu)
-                    setFilteredRecipes(data.menu)
-          }).catch((err)=>{
-              console.log(err)
-          })
-       }, 10000);    
-   },[])
+export default function Home({recipes,setRecipes,cart,setCart,filteredRecipes,setFilteredRecipes}) {
   
     return(
         <div className='content p-4'>
@@ -28,7 +15,10 @@ export default function Home({recipes,setRecipes,cart,setCart}) {
                     <span className="text-bolder">Menu</span>
                     <span> De commande</span>
                 </div>
-               <Input  placeholder="Rechercher des aliments , du café...."/>
+               <Input onkeyup={(e)=>{
+                   let a = recipes.filter(recipe=>recipe.productName==e.currentTarget.value)
+                   console.log(a)
+               }} placeholder="Rechercher des aliments , du café...."/>
             </header>
             <div className="d-flex categories py-3">
                  <Category recipes={recipes} setRecipes={setRecipes} filteredRrecipes={filteredRecipes} setFilteredRecipes={setFilteredRecipes} icon={<IoFastFoodOutline/>}  title="Tout"/>
@@ -45,10 +35,10 @@ export default function Home({recipes,setRecipes,cart,setCart}) {
                     {recipes.length===0 && <Loader/>}
                 <div className="card__section">
                   { filteredRecipes.length===0 && recipes.map(recipe=>{
-                       return <Card cart={cart} setCart={setCart} image={recipe.img} title={recipe.name} price={recipe.price}/>
+                       return <Card cart={cart} setCart={setCart} image={recipe.img} title={recipe.productName} price={recipe.price}/>
                   })}
                   {filteredRecipes!==0  && filteredRecipes.map(filteredRecipe=>{
-                    return <Card cart={cart} setCart={setCart} image={filteredRecipe.img} title={filteredRecipe.name} price={filteredRecipe.price}/>
+                    return <Card cart={cart} setCart={setCart} image={filteredRecipe.img} title={filteredRecipe.productName} price={filteredRecipe.price}/>
                   })}
                 </div>
             </section>
