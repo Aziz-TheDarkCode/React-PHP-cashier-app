@@ -5,11 +5,16 @@ import Card from "../../components/card/card";
 import Category from "../../components/navlinks/category";
 import Input from "../../components/input/input";
 import Loader from "../../components/loader/loader";
+import Aside from "../../components/aside/aside";
+import Invoice from "../../components/invoice/invoice";
 
 export default function Home({recipes,setRecipes,cart,setCart,filteredRecipes,setFilteredRecipes}) {
   
     return(
-        <div className='content p-4'>
+
+        <div className="container page-content">
+            <Aside cart={cart} setCart={setCart}/>  
+            <div className='content p-4'>
             <header className="d-flex justify-content-between align-items-center">
                 <div className="text-larger">
                     <span className="text-bolder">Menu</span>
@@ -43,5 +48,8 @@ export default function Home({recipes,setRecipes,cart,setCart,filteredRecipes,se
                 </div>
             </section>
         </div>
+            <Invoice cart={cart} setCart={setCart}/>  
+        </div>
+        
     )
 }

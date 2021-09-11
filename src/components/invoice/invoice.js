@@ -52,7 +52,7 @@ export default function Invoice({cart,setCart}) {
                                 <td>{prod.name}</td>
                                 <td>{prod.qty}</td>
                                 <td>{prod.price}</td>
-                            </tr>
+                            </tr>   
                         )
                     })}
                 </tbody>

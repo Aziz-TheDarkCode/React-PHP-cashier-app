@@ -6,6 +6,8 @@ import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import Dashboard from "./pages/dashboard/dashboard";
 import Settings from "./pages/settings/settings";
 import {useEffect} from 'react'
+import Modal from "./components/modal/modal";
+import Login from "./pages/login/login";
 
 function App() {
 
@@ -27,21 +29,22 @@ function App() {
      },[])
   return (
     <Router>
-      <div className="container page-content">
-        <Aside cart={cart} setCart={setCart}/>
+      <Modal/>
        <Switch>
+          <Route path="/Login" >
+              <Login/>
+          </Route>
           <Route  path="/dashboard">
-              <Dashboard  recipes={recipes} setRecipes={setRecipes}/>
+              <Dashboard  cart={cart} setCart={setCart} recipes={recipes} setRecipes={setRecipes}/>
           </Route>  
           <Route   path="/settings" >
               <Settings/>
           </Route>
-          <Route path="/" >
+          <Route path="" >
               <Home filteredRecipes={filteredRecipes} setFilteredRecipes={setFilteredRecipes} recipes = {recipes}  setRecipes = {setRecipes} cart={cart} setCart={setCart}/>
           </Route>
        </Switch>
-        <Invoice cart={cart} setCart={setCart}/>  
-      </div>
+   
     </Router>
 
 

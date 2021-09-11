@@ -1,14 +1,18 @@
 import { useState,useEffect } from 'react'
 import {AiOutlineDelete, GrAdd} from 'react-icons/all'
 import {BrowserRouter as Router, Route,NavLink, Link} from 'react-router-dom'
+import Aside from '../../components/aside/aside'
 import Bar from '../../components/bar/bar'
 import Button from '../../components/button/button'
+import Invoice from '../../components/invoice/invoice'
 import Skeleton from '../../components/skeleton/skeleton'
 import NewProduct from './addProduct/addProduct'
-export default function Dashboard ({recipes,setRecipes}){
+export default function Dashboard ({recipes,setRecipes,cart,setCart}){
     return(
         <Router>
-        <div className="content p-4">
+            <div className="container page-content">
+                <Aside cart={cart} setCart={setCart}/>  
+                <div  className="content p-4">
             <Route path="/dashboard">
             <div className="d-flex justify-content-between align-items-center">
                 <p className="text-larger text-bolder">Dashboard</p>
@@ -123,6 +127,8 @@ export default function Dashboard ({recipes,setRecipes}){
                 </Route>
           
         </div>
+                <Invoice cart={cart} setCart={setCart}/> 
+            </div>
         </Router>
     )
 }

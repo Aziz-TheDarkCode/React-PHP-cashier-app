@@ -6,6 +6,7 @@ import Button from "../../../components/button/button";
 import Checkbox from "../../../components/input/checkbox";
 import Fileinput from "../../../components/input/fileInput";
 import Input from "../../../components/input/input";
+import Modal from "../../../components/modal/modal";
 import "./addProduct.css"
 export default function NewProduct () 
 {
@@ -14,8 +15,6 @@ export default function NewProduct ()
         if(e.target.value!=='') {
             setSubmittedData({...submittedData,[e.target.name] : e.target.value})
             e.target.classList.remove("red-border")
-            // return submittedData
-
         }else
         {
             e.target.classList.add("red-border")
@@ -34,10 +33,12 @@ export default function NewProduct ()
         fetch("http://localhost:3500/POST/Product/add-product.php", requestOptions)
         .then(response => response.json())
         .then(data => console.log(data));
+        document.querySelector(".modal-content").style.display="flex"
     }
 
     return(
         <div>
+          
             <Link to="/dashboard">
             <MdKeyboardArrowLeft className="text-larger"/>
             </Link>

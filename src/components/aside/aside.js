@@ -2,6 +2,7 @@ import { AiOutlineShop,RiDashboardLine, AiOutlineSetting} from "react-icons/all"
 import NavLinks from "../navlinks/navLinks"
 import "./aside.css"
 import {NavLink} from "react-router-dom";
+
 let active = {
         fontWeight: "bold",
         color: "#ff265d",  
@@ -10,18 +11,22 @@ let active = {
 export default function Aside() {
     return(
             <div className="bg-white aside p-3">
-                <NavLink  exact activeStyle={active} to="/">
-                    <NavLinks icon={<AiOutlineShop/>} title="Acceuil"  type='type-1'/>
-                </NavLink>
-                <NavLink exact activeStyle={active} to="/dashboard">
-                    <NavLinks icon={<RiDashboardLine/>} title="Dashboard" type='type-1'/>
-                </NavLink>
-                <NavLink exact activeStyle={active} to="/Settings">
-                    <NavLinks icon={<AiOutlineSetting/>} title="Paramètres" type='type-1'/>   
-                </NavLink>
+                <div>
+                    <NavLink  exact activeStyle={active} to="/">
+                        <NavLinks icon={<AiOutlineShop/>} title="Acceuil"  type='type-1'/>
+                    </NavLink>
+                    <NavLink exact activeStyle={active} to="/dashboard">
+                        <NavLinks icon={<RiDashboardLine/>} title="Dashboard" type='type-1'/>
+                    </NavLink>
+                    <NavLink exact activeStyle={active} to="/Settings">
+                        <NavLinks icon={<AiOutlineSetting/>} title="Paramètres" type='type-1'/>   
+                    </NavLink>
+                </div>
 
-               
-    
+                <div className='text-center'>
+                <img src="https://i3.wp.com/hypebeast.com/image/2020/07/apple-memoji-update-headwear-masks-hairstyles-1.png?w=1600" width="60px" className="rounded-box"/>      
+                <p className="black-text">Admin</p>
+                </div>
             </div>        
     )
 }
