@@ -1,6 +1,6 @@
 import { useState,useEffect } from 'react'
-import {AiOutlineDelete, GrAdd} from 'react-icons/all'
-import {BrowserRouter as Router, Route,NavLink, Link} from 'react-router-dom'
+import {AiOutlineDelete} from 'react-icons/all'
+import {BrowserRouter as Router, Route ,Link} from 'react-router-dom'
 import Aside from '../../components/aside/aside'
 import Bar from '../../components/bar/bar'
 import Button from '../../components/button/button'
@@ -8,6 +8,17 @@ import Invoice from '../../components/invoice/invoice'
 import Skeleton from '../../components/skeleton/skeleton'
 import NewProduct from './addProduct/addProduct'
 export default function Dashboard ({recipes,setRecipes,cart,setCart}){
+    useEffect(()=>{
+        setTimeout(() => {
+            fetch('http://localhost:3500/GET/Product/all-products.php').then(
+                (res) => res.json()).then(
+                    (data) => {
+                        setRecipes(data)
+              }).catch((err)=>{
+                  console.log(err)
+              })
+           }, 1);    
+       },[])
     return(
         <Router>
             <div className="container page-content">

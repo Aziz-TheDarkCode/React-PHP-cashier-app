@@ -34,7 +34,7 @@ export default function Login(){
                         <div className='py-4 col-6 mx-auto'>         
                         <Button onclick={()=>{
                             console.log(submittedData)
-                        }} text="Let's go mon soleil☀️" type="primary"/>
+                        }} text="Gnou Dem !!" type="primary"/>
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 import "./home.css"
 import {FaHamburger,IoPizzaOutline,IoIceCreamOutline,AiOutlineCoffee,BiDrink,GiFruitBowl,GiChipsBag,IoFastFoodOutline   } from "react-icons/all"
-import { useEffect, useState } from "react"
+import { useEffect,} from "react"
 import Card from "../../components/card/card";
 import Category from "../../components/navlinks/category";
 import Input from "../../components/input/input";
@@ -9,9 +9,20 @@ import Aside from "../../components/aside/aside";
 import Invoice from "../../components/invoice/invoice";
 
 export default function Home({recipes,setRecipes,cart,setCart,filteredRecipes,setFilteredRecipes}) {
-  
+    useEffect(()=>{
+        setTimeout(() => {
+            fetch('http://localhost:3500/GET/Product/all-products.php').then(
+                (res) => res.json()).then(
+                    (data) => {
+                        setRecipes(data)
+                        setFilteredRecipes(data)
+                        console.log(data)
+              }).catch((err)=>{
+                  console.log(err)
+              })
+           }, 1);    
+       },[])
     return(
-
         <div className="container page-content">
             <Aside cart={cart} setCart={setCart}/>  
             <div className='content p-4'>
@@ -21,7 +32,7 @@ export default function Home({recipes,setRecipes,cart,setCart,filteredRecipes,se
                     <span> De commande</span>
                 </div>
                <Input onkeyup={(e)=>{
-                   let a = recipes.filter(recipe=>recipe.productName==e.currentTarget.value)
+                   let a = recipes.filter(recipe=>recipe.productName===e.currentTarget.value)
                    console.log(a)
                }} placeholder="Rechercher des aliments , du café...."/>
             </header>

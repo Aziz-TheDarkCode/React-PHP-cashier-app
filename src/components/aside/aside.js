@@ -25,7 +25,7 @@ export default function Aside() {
 
                 <div className='text-center'>
                 <img src="https://i3.wp.com/hypebeast.com/image/2020/07/apple-memoji-update-headwear-masks-hairstyles-1.png?w=1600" width="60px" className="rounded-box"/>      
-                <p className="black-text">Admin</p>
+                <h4 className="black-text">Administrateur</h4>
                 </div>
             </div>        
     )
