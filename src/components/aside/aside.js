@@ -1,4 +1,4 @@
-import { AiOutlineShop,RiDashboardLine, AiOutlineSetting} from "react-icons/all"
+import { AiOutlineShop,RiDashboardLine, AiOutlineSetting,BiHistory} from "react-icons/all"
 import NavLinks from "../navlinks/navLinks"
 import "./aside.css"
 import {NavLink} from "react-router-dom";
@@ -20,6 +20,9 @@ export default function Aside() {
                     </NavLink>
                     <NavLink exact activeStyle={active} to="/Settings">
                         <NavLinks icon={<AiOutlineSetting/>} title="Paramètres" type='type-1'/>   
+                    </NavLink>
+                    <NavLink exact activeStyle={active} to="/s">
+                        <NavLinks icon={<BiHistory/>} title="Historique" type='type-1'/>   
                     </NavLink>
                 </div>
 
