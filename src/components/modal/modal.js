@@ -1,4 +1,5 @@
 import { BiCheckDouble } from "react-icons/bi"
+import { Redirect } from "react-router"
 import Button from "../button/button"
 import "./modal.css"
 export default function Modal (){

@@ -5,8 +5,6 @@ import Card from "../../components/card/card";
 import Category from "../../components/navlinks/category";
 import Input from "../../components/input/input";
 import Loader from "../../components/loader/loader";
-import Aside from "../../components/aside/aside";
-import Invoice from "../../components/invoice/invoice";
 
 export default function Home({recipes,setRecipes,cart,setCart,filteredRecipes,setFilteredRecipes}) {
     useEffect(()=>{

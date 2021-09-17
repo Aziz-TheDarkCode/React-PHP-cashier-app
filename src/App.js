@@ -5,10 +5,9 @@ import Dashboard from "./pages/dashboard/dashboard";
 import Settings from "./pages/settings/settings";
 import Modal from "./components/modal/modal";
 import Login from "./pages/login/login";
-import NewProduct from "./pages/dashboard/addProduct/addProduct";
-import NewCashier from "./pages/settings/addCashier/cashier";
 import Aside from "./components/aside/aside";
 import Invoice from "./components/invoice/invoice";
+import History from "./pages/history/history";
 
 function App() {
 
@@ -28,9 +27,9 @@ function App() {
                 <Route  path="/dashboard">
                     <Dashboard  cart={cart} setCart={setCart} recipes={recipes} setRecipes={setRecipes}/>
                 </Route>  
-              {/* <Route  path="/new-cashier">
-                  <NewCashier cart={cart} setCart={setCart}/>
-              </Route>   */}
+              <Route  path="/history">
+                    <History/>
+              </Route>  
                 <Route   path="/settings" >
                     <Settings cart={cart} setCart={setCart}/>
                 </Route>

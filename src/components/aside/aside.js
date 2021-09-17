@@ -21,7 +21,7 @@ export default function Aside() {
                     <NavLink exact activeStyle={active} to="/Settings">
                         <NavLinks icon={<AiOutlineSetting/>} title="Paramètres" type='type-1'/>   
                     </NavLink>
-                    <NavLink exact activeStyle={active} to="/s">
+                    <NavLink exact activeStyle={active} to="/history">
                         <NavLinks icon={<BiHistory/>} title="Historique" type='type-1'/>   
                     </NavLink>
                 </div>

@@ -2,11 +2,9 @@
 import { useState } from "react";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { Link } from "react-router-dom";
-import Aside from "../../../components/aside/aside";
 import Button from "../../../components/button/button";
 import Checkbox from "../../../components/input/checkbox";
 import Input from "../../../components/input/input";
-import Invoice from "../../../components/invoice/invoice";
 import './cashier.css'
 
 export default function NewCashier () 
@@ -51,10 +49,12 @@ export default function NewCashier ()
             </div>
                 <div className='mt-5'>
                 <Checkbox onclick={handler} text="Admin" value='1'/>
-                <Checkbox onclick={handler} text="User" value='2'/>
+                <Checkbox onclick={handler} text="User" value='0'/>
                 </div>
             <div className="mt-5 col-3 mx-auto">
-                <Button onclick={submit} text="Ajouter" type="primary"/>
+                <Button onclick={()=>{
+                    console.log(submittedData)
+                }} text="Ajouter" type="primary"/>
             </div>
         </>
     )   

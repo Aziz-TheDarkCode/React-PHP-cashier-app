@@ -1,12 +1,9 @@
 import { useState } from "react";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { Link } from "react-router-dom";
-
 import Button from "../../../components/button/button";
 import Checkbox from "../../../components/input/checkbox";
-import Fileinput from "../../../components/input/fileInput";
 import Input from "../../../components/input/input";
-import Modal from "../../../components/modal/modal";
 import "./addProduct.css"
 export default function NewProduct () 
 {
