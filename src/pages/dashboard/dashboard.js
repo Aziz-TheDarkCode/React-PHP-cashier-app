@@ -21,9 +21,7 @@ export default function Dashboard ({recipes,setRecipes,cart,setCart}){
        },[])
     return(
         <Router>
-            <div className="container page-content">
-                <Aside cart={cart} setCart={setCart}/>  
-                <div  className="content p-4">
+
             <Route path="/dashboard">
             <div className="d-flex justify-content-between align-items-center">
                 <p className="text-larger text-bolder">Dashboard</p>
@@ -135,11 +133,7 @@ export default function Dashboard ({recipes,setRecipes,cart,setCart}){
            
                 <Route path="/newproduct">
                   <NewProduct/>
-                </Route>
-          
-        </div>
-                <Invoice cart={cart} setCart={setCart}/> 
-            </div>
+                </Route>      
         </Router>
     )
 }

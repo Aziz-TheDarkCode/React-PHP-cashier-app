@@ -5,6 +5,10 @@ import Dashboard from "./pages/dashboard/dashboard";
 import Settings from "./pages/settings/settings";
 import Modal from "./components/modal/modal";
 import Login from "./pages/login/login";
+import NewProduct from "./pages/dashboard/addProduct/addProduct";
+import NewCashier from "./pages/settings/addCashier/cashier";
+import Aside from "./components/aside/aside";
+import Invoice from "./components/invoice/invoice";
 
 function App() {
 
@@ -15,18 +19,28 @@ function App() {
     <Router>
       <Modal/>
        <Switch>
-          <Route path="/Login" >
-              <Login/>
-          </Route>
-          <Route  path="/dashboard">
-              <Dashboard  cart={cart} setCart={setCart} recipes={recipes} setRecipes={setRecipes}/>
-          </Route>  
-          <Route   path="/settings" >
-              <Settings cart={cart} setCart={setCart}/>
-          </Route>
-          <Route path="" >
-              <Home filteredRecipes={filteredRecipes} setFilteredRecipes={setFilteredRecipes} recipes = {recipes}  setRecipes = {setRecipes} cart={cart} setCart={setCart}/>
-          </Route>
+                <Route path="/Login" >
+                  <Login/>
+                </Route>
+         <div className="container page-content">
+              <Aside cart={cart} setCart={setCart}/> 
+             <div className='content p-4'>
+                <Route  path="/dashboard">
+                    <Dashboard  cart={cart} setCart={setCart} recipes={recipes} setRecipes={setRecipes}/>
+                </Route>  
+              {/* <Route  path="/new-cashier">
+                  <NewCashier cart={cart} setCart={setCart}/>
+              </Route>   */}
+                <Route   path="/settings" >
+                    <Settings cart={cart} setCart={setCart}/>
+                </Route>
+                <Route exact path="/" >
+                    <Home filteredRecipes={filteredRecipes} setFilteredRecipes={setFilteredRecipes} recipes = {recipes}  setRecipes = {setRecipes} cart={cart} setCart={setCart}/>
+                </Route>
+             </div>
+              <Invoice cart={cart} setCart={setCart}/> 
+         </div>
+          
        </Switch>
    
     </Router>

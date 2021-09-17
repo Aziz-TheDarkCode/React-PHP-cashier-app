@@ -1,14 +1,13 @@
 import { AiOutlineDelete } from "react-icons/ai";
-import Aside from "../../components/aside/aside";
 import Button from "../../components/button/button";
-import Invoice from "../../components/invoice/invoice";
+import NewCashier from "./addCashier/cashier";
+import {BrowserRouter as Router,Route,Link} from "react-router-dom";
 
 export default function Settings({cart,setCart}) 
 {
     return(
-        <div class="container page-content">
-        <Aside/>
-        <div className="content p-4">
+        <Router>
+            <Route path="/settings">
             <p className="text-larger text-bolder mb-3">Paramètres</p>
             <div className="bg-white p-3 rounded-box">
                 <h3>Information sur l'utilisateur</h3>
@@ -66,12 +65,16 @@ export default function Settings({cart,setCart})
                 </tr>
                 </tbody>
             </table>
+            <Link to='/new-cashier'>
             <div className='col-3 mt-3'>
-            <Button text="Nouveau caissier" type='primary' />
+                <Button text="Nouveau caissier" type='primary' />
             </div>
+            </Link>
         </div>
-        </div>
-        <Invoice cart={cart} setCart={setCart}/> 
-        </div>
+            </Route>
+            <Route path="/new-cashier">
+                <NewCashier/>
+            </Route>
+        </Router>
     )    
 }
