@@ -5,14 +5,18 @@ import "./invoice.css"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import * as htmlToImage from 'html-to-image';
-import { toPng, toJpeg, toBlob, toPixelData, toSvg } from 'html-to-image';
+import { toPng } from 'html-to-image';
 
 export default function Invoice({cart,setCart}) {
     let [totalPrice,setTotalPrice]=useState(0)
     let [count,setCounter]=useState(1)
-    const notif = ()=> toast("Achat Validé avec succès ✔️ !")
-        let print = (e) =>{
+    let [saleHistory,setSaleHistory]=useState([])
 
+    // Business Logic 
+
+    let notif = ()=> toast("Achat Validé avec succès ✔️ !")
+
+    let print = (e) =>{
             setCounter(count + 1)
             htmlToImage.toPng(document.querySelector(".invoice"))
             .then((dataUrl)=>{
@@ -22,14 +26,16 @@ export default function Invoice({cart,setCart}) {
                 link.click();
                 setCart([])
             })
+
             //Notification             
             notif()
+
             //Hide some elements
             e.target.style.display = 'none'
             document.querySelector(".cart-cleaner").style.display = 'none'
+            // setSaleHistory(saleHistory=>[...saleHistory,cartr])
+            console.log(saleHistory)
         }   
-    // const notify = () => toast("Achat Valider avec succès !");
-
     let amount = ()=>{
         let sum = cart.reduce((arr,prod)=>{
             arr.push(prod.price)

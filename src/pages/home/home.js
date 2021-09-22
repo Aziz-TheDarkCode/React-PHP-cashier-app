@@ -9,11 +9,11 @@ import Loader from "../../components/loader/loader";
 export default function Home({recipes,setRecipes,cart,setCart,filteredRecipes,setFilteredRecipes}) {
     useEffect(()=>{
         setTimeout(() => {
-            fetch('http://localhost:3500/GET/Product/all-products.php').then(
+            fetch('./recipe.json').then(
                 (res) => res.json()).then(
                     (data) => {
-                        setRecipes(data)
-                        setFilteredRecipes(data)
+                        setRecipes(data.menu)
+                        setFilteredRecipes(data.menu)
                         console.log(data)
               }).catch((err)=>{
                   console.log(err)

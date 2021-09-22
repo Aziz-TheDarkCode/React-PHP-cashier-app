@@ -2,6 +2,7 @@ import { AiOutlineDelete } from "react-icons/ai";
 import Button from "../../components/button/button";
 import NewCashier from "./addCashier/cashier";
 import {BrowserRouter as Router,Route,Link} from "react-router-dom";
+import Skeleton from "../../components/skeleton/skeleton";
 
 export default function Settings({cart,setCart}) 
 {
@@ -45,24 +46,10 @@ export default function Settings({cart,setCart})
                     <td>Samba Tine</td>
                     <td>20-06-2020</td>
                 </tr>
-                <tr className='p-5'>
-                    <td className="text-primary text-bolder"><AiOutlineDelete/></td>
-                    <td className="text-bolder">00246</td>
-                    <td>Abdallah Ndiaye</td>
-                    <td>20-06-2021</td>
-                </tr>
-                <tr className='p-5'>
-                    <td className="text-primary text-bolder"><AiOutlineDelete/></td>
-                    <td className="text-bolder">00246</td>
-                    <td>Salimata Gueye</td>
-                    <td>20-06-2021</td>
-                </tr>
-                <tr className='p-5'>
-                    <td className="text-primary text-bolder"><AiOutlineDelete/></td>
-                    <td className="text-bolder">00246</td>
-                    <td>Ibrahima Ndir</td>
-                    <td>20-06-2021</td>
-                </tr>
+                {/* <tr className='p-5'>
+                   <Skeleton/>
+                </tr> */}
+
                 </tbody>
             </table>
             <Link to='/new-cashier'>
