@@ -1,0 +1,16 @@
+{
+    "name": "darkcode/cashier",
+    "autoload": {
+        "psr-4": {
+            "DB\\": "./src/classes/Database",
+            "CRUD\\": "./src/classes/Product"
+        }
+    },
+    "authors": [
+        {
+            "name": "Abdou Aziz Ndiaye",
+            "email": "abdouaziznjay@gmail.com"
+        }
+    ],
+    "require": {}
+}

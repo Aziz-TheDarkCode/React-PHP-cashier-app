@@ -1,0 +1,102 @@
+.input-text
+{
+    border: 1.8px solid rgba(128, 128, 128, 0.39);
+    padding: .8rem;
+    border-radius: 2rem;
+    font-family: "Space Grotesk";
+}
+.input-text:focus{
+    outline:yellow;
+}
+
+/* Customized file input */
+
+.file-upload .file-upload-select {
+	border: 1.8px solid rgba(128, 128, 128, 0.39);
+    border-radius: 2rem;
+	text-align: left;
+	overflow: hidden;
+	position: relative;
+    cursor: pointer;
+}
+.file-upload .file-upload-select .file-select-button {
+	background:#ff265d;
+	padding: 10px;
+	display: inline-block;
+    color: white;
+}
+.file-upload .file-upload-select .file-select-name {
+	display: inline-block;
+	padding: 10px;
+}
+.file-upload .file-upload-select input[type="file"] {
+	display: none;
+}
+
+/* Customized Checkbox */
+.check-container {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .check-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color:white ;
+    border: 1.8px solid rgba(128, 128, 128, 0.39);
+    border-radius: 50%;
+  
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .check-container:hover input ~ .checkmark {
+    background-color: rgba(128, 128, 128, 0.068);
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .check-container input:checked ~ .checkmark {
+    background-color: #ff265d;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .check-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .check-container .checkmark:after {
+       top: 3.9px;
+      left: 3.9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+.md
+{
+  width: 50%;
+}

@@ -1,0 +1,17 @@
+.modal-content
+{
+    position : fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.289);
+    z-index: 1;
+    display: none;
+    transition: .7s ease-in-out;
+    
+}
+.modal
+{
+    background-color: white;
+    
+}
+

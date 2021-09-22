@@ -1,0 +1,165 @@
+{
+    "menu" : 
+    [
+        {
+            "productName" : "Pizza Napolitain",
+            "price" : 4000,
+            "categoryName" : "Pizza",
+            "img" :"https://i.ya-webdesign.com/images/chicago-connection-pizza-png-19.png",
+            "quantity": 22       
+        },
+        {
+            "productName" : "Présséa Nectar Cocktail",
+            "price" : 1200,
+            "categoryName" : "Boisson",
+            "img" :"https://agroci.ci/wp-content/uploads/2020/02/Nectar.png",
+            "quantity": 1          
+        },
+        
+        {
+            "productName" : "GoldFish ",
+            "price" : 400,
+            "categoryName" : "Snack",
+            "img" :"https://www.vippng.com/png/detail/49-499717_everything-you-love-about-goldfish-goldfish-flavor-blasted.png",
+            "quantity": 52         
+        },
+        {
+            "productName" : "Ananas",
+            "price" : 500,
+            "categoryName" : "Fruits",
+            "img" :"https://i.ya-webdesign.com/images/tropical-clipart-pineapple.png",
+            "quantity": 2          
+        },
+        
+        {
+            "productName" : "Double Cheese Burger",
+            "price" : 2500,
+            "categoryName" : "Burger",
+            "img" :"https://krispyfood.co.uk/wp-content/uploads/2017/08/cheese-burger.png",
+            "quantity": 3         
+        },
+        
+        {
+            "productName" : "Espresso",
+            "price" : 800,
+            "categoryName" : "Café",
+            "img" :"https://purepng.com/public/uploads/large/purepng.com-cup-mug-coffeecupmufcoffeebean-1411527406018xgn16.png",
+            "quantity": 13         
+        },
+        {
+            "productName" : "Canette Fanta",
+            "price" : 300,
+            "categoryName" : "Boisson",
+            "img" :"https://www.toscafood.ro/uploads/84/social_fanta-doza-033l_j-WsMg.png",
+            "quantity": 3         
+        },
+        {
+            "productName" : "Canette Coca Cola",
+            "price" : 350,
+            "categoryName" : "Boisson",
+            "img" :"https://pluspng.com/img-png/coca-cola-355ml-2000.png",
+            "quantity": 64        
+        },
+        {
+            "productName" : "Burger Simple",
+            "price" : 1000,
+            "categoryName" : "Burger",
+            "img" :"https://vistapointe.net/images/burger-wallpaper-7.jpg",
+            "quantity": 130          
+        },
+        {
+            "productName" : "Avocat",
+            "price" : 250,
+            "categoryName" : "Fruits",
+            "img" :"https://pngpress.com/wp-content/uploads/2020/08/uploads_avocado_avocado_PNG15497.png",
+            "quantity": 7          
+        },
+        {
+            "productName" : "Javascript Burger",
+            "price" : 3000,
+            "categoryName" : "Burger",
+            "img" :"https://vistapointe.net/images/burger-wallpaper-16.jpg",
+            "quantity": 3          
+        },
+        {
+            "productName" : "Cappucino",
+            "price" : 1000,
+            "categoryName" : "Café",
+            "img" :"https://catherineasquithgallery.com/uploads/posts/2021-03/1614563462_83-p-kofe-na-belom-fone-101.png",
+            "quantity": 35         
+        },
+        {
+            "productName" : "Bouteille 1L Kirène",
+            "price" : 400,
+            "categoryName" : "Boisson",
+            "img" :"https://agroci.ci/wp-content/uploads/2020/03/15.png",
+            "quantity": 123         
+        },
+        {
+            "productName" : "Chips Lays Nature",
+            "price" : 600,
+            "categoryName" : "Snack",
+            "img" :"https://im0-tub-com.yandex.net/i?id=3697626bd0fca3db89e56d2d0f4c6067&n=13",
+            "quantity": 200         
+        },
+        {
+            "productName" : "Top Grenadine",
+            "price" : 800,
+            "categoryName" : "Boisson",
+            "img" :"https://www.easymagasin.com/wp-content/uploads/2019/03/Boisson-Gazeuse-Top-1L.png",
+            "quantity": 3         
+        },
+        {
+            "productName" : "Chewing Gum Menthe",
+            "price" : 100,
+            "categoryName" : "Snack",
+            "img" :"https://www.action.com/globalassets/cmsarticleimages/10/67/2579679_80840787-111.png/",
+            "quantity": 27         
+        },
+        {
+            "productName" : "Fraise",
+            "price" : 600,
+            "categoryName" : "Fruits",
+            "img" :"https://vistapointe.net/images/strawberry-7.jpg",
+            "quantity": 1         
+        },
+        
+        {
+            "productName" : "Pizza Pepperoni",
+            "price" : 6000,
+            "categoryName" : "Pizza",
+            "img" :"https://vistapointe.net/images/pizza-1.jpg",
+            "quantity": 4          
+        },
+        {
+            "productName" : "1kg de Bananes",
+            "price" : 600,
+            "categoryName" : "Fruits",
+            "img" :"https://gymn1-sochi.ru/800/600/https/www.mariowiki.com/images/6/66/BananabunchDKCR.png",
+            "quantity": 5         
+        },
+        {
+            "productName" : "Crème Glacée Magnum",
+            "price" : 2000,
+            "categoryName" : "Glace",
+            "img" :"https://www.magnumicecream.com/content/dam/unilever/magnum/united_states_of_america/pack_shot/077567001023-2329491-png.png",
+            "quantity": 31         
+        },
+        {
+            "productName" : "Pizza Alfredo",
+            "price" : 6000,
+            "categoryName" : "Pizza",
+            "img" :"https://vistapointe.net/images/pizza-3.jpg",
+            "quantity": 11          
+        },
+        {
+            "productName" : "Veggie Burger",
+            "price" : 1500,
+            "categoryName" : "Burger",
+            "img" :"https://vistapointe.net/images/burger-7.jpg",
+            "quantity": 22          
+        }
+        
+       
+    ]
+}
