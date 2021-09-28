@@ -21,6 +21,7 @@ Après avoir cloner le projet dabord :
 
 
 # Architecture du projet
+![Proje](https://user-images.githubusercontent.com/68601529/135110804-9570d38f-58b4-4f5b-b25b-0f293d32b15c.PNG)
 
-![Proje](https://user-images.githubusercontent.com/68601529/135110441-17b1abc6-997c-4ec0-8cba-4a1d5b9e7848.PNG)
+
 
