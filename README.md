@@ -21,6 +21,5 @@ Après avoir cloner le projet dabord :
 
 
 # Architecture du projet
-- Structure Generale du projet
 ![Proje](https://user-images.githubusercontent.com/68601529/135110089-f28fd92b-f25c-4f12-aa6d-2aae20e8879e.PNG)
 
