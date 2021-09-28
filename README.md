@@ -6,16 +6,6 @@ Yacine Diop SENE
 
 Ceci est un projet de vente et de gestion de produits buildé avec PHP (Restful API) et dont la partie front a été implementé avec le React JS 
 
-# Technologies utilisées
-- PHP : le backend de notre projet fonctionne entièrement sur php, nous avons utilisé une architecture oop pour rendre notre projet plus robuste, les fichiers de       connexion et les différentes classes sont tous faits dans des fichiers php afin que nous appliquions la méthode DRY dans notre projet.
-- 
-- MYSQL : Base de données MySQL qui est un service de base de données entièrement géré pour le déploiement d'applications cloud-native utilisant les services... nous l'avons utilisé dans notre projet comme système de base de données principal, notamment avec mysqli, pour effectuer toutes les requêtes entre l'application via php à la base de données via MySQL
-
-- React JS : la partie frontend de notre projet a carrément a été implenter avec la puissance library javascript a savoir le React JS.
-- CSS
-- yarn (package manager)
-- composer ( PHP dependency manager)
-
 # Comment cloner le projet
 
 Après avoir cloner le projet dabord :
@@ -27,8 +17,24 @@ Après avoir cloner le projet dabord :
 - Profiter de l'application
 
 
-# Architecture du projet
-![Proje](https://user-images.githubusercontent.com/68601529/135110988-5efa5f98-463d-459a-b45f-7c5bd52e7290.PNG)
+# Technologies utilisées
+- PHP : le backend de notre projet fonctionne entièrement sur php, nous avons utilisé une architecture oop pour rendre notre projet plus robuste, les fichiers de       connexion et les différentes classes sont tous faits dans des fichiers php afin que nous appliquions la méthode DRY dans notre projet.
+
+- MYSQL : Base de données MySQL qui est un service de base de données entièrement géré pour le déploiement d'applications cloud-native utilisant les services... nous l'avons utilisé dans notre projet comme système de base de données principal, notamment avec mysqli, pour effectuer toutes les requêtes entre l'application via php à la base de données via MySQL
+
+- React JS : la partie frontend de notre projet a carrément a été implenter avec la puissance library javascript a savoir le React JS.
+- CSS
+- yarn (package manager)
+- composer ( PHP dependency manager)
+
+# Outils
+- VScode :  est l'un des principaux éditeurs de texte que nous avons utilisé dans ce projet, très pratique pour travailler sur plusieurs parties en même temps
+- GitHub - pour le contrôle de version pendant que nous travaillons en equipe
+- Adobe Xd : Pour des fins de conception et de modélisation
+
+
+
+
 
 
 
