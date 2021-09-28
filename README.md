@@ -2,11 +2,12 @@
 Ceci est un projet de vente et de gestion de produits buildé avec PHP (Restful API) et dont la partie front a été implementé avec le React JS 
 
 # Technologies utilisées
-
-- PHP : 
-- MYSQL : 
+- PHP 
+- MYSQL  
 - React JS 
 - CSS3
+- yarn (package manager)
+- composer ( PHP dependency manager)
 
 # Comment cloner le projet
 
@@ -19,3 +20,4 @@ Après avoir cloner le projet dabord :
 - Profiter de l'application
 
 
+![melting-chocolate-bar-png-melted-chocolate-png-image-2403](https://user-images.githubusercontent.com/68601529/135108795-6e3beee6-e5db-4b20-a104-35a026137a65.png)
