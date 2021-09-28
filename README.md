@@ -20,4 +20,7 @@ Après avoir cloner le projet dabord :
 - Profiter de l'application
 
 
-![melting-chocolate-bar-png-melted-chocolate-png-image-2403](https://user-images.githubusercontent.com/68601529/135108795-6e3beee6-e5db-4b20-a104-35a026137a65.png)
+# Architecture du projet
+- Structure Generale du projet
+![Proje](https://user-images.githubusercontent.com/68601529/135110089-f28fd92b-f25c-4f12-aa6d-2aae20e8879e.PNG)
+
