@@ -2,6 +2,7 @@
 GROUPE : PR 215
 
 Abdou Aziz NDIAYE
+
 Yacine Diop SENE
 
 Ceci est un projet de vente et de gestion de produits buildé avec PHP (Restful API) et dont la partie front a été implementé avec le React JS 
