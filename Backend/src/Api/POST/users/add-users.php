@@ -5,28 +5,28 @@
   header('Access-Control-Allow-Methods: POST');
   header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
   
-  use CRUD\Product;
-  use DB\Database;
-
+  
   require_once("../../../../vendor/autoload.php");
+  
+   use DB\Database;
+   use USER\User;
+
   // Instantiate DB & connect
   $database = new Database;
     $db = $database->get_connection();
   // Instantiate blog post object
-  $product= new Product($db);
+  $user= new User($db);
 
   // Get raw posted data
   $data = json_decode(file_get_contents("php://input"));
 
-$product->productName = $data->productName;
-$product->price = $data->price;
-$product->category = $data->category;
-$product->quantity = $data->quantity;
-$product->img = $data->img;
+$user->user = $data->name;
+$user->password = $data->password;
+$user->status = $data->status;
 
 
   // Create post
-  if($product->createProduct()) {
+  if($user->createUser()) {
     echo json_encode(
       array('message' => 'Post Created')
     );

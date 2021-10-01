@@ -3,7 +3,8 @@
     "autoload": {
         "psr-4": {
             "DB\\": "./src/classes/Database",
-            "CRUD\\": "./src/classes/Product"
+            "CRUD\\": "./src/classes/Product",
+            "USER\\": "./src/classes/Users"
         }
     },
     "authors": [

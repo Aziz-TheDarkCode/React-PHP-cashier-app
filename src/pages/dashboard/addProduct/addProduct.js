@@ -27,7 +27,7 @@ export default function NewProduct ()
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(submittedData)
         };
-        fetch("http://localhost:3500/POST/Product/add-product.php", requestOptions)
+        fetch("http://localhost/cashier-app/src/Api/POST/Product/add-product.php", requestOptions)
         .then(response => response.json())
         .then(data => console.log(data));
         document.querySelector(".modal-content").style.display="flex"
@@ -50,13 +50,13 @@ export default function NewProduct ()
                 
             </div>
                 <div className='mt-5'>
-                <Checkbox onclick={handler} text="Pizza" value='1'/>
-                <Checkbox onclick={handler} text="Burger" value='2'/>
-                <Checkbox onclick={handler} text="Cafe" value='3'/>
-                <Checkbox onclick={handler} text="Snack" value='9'/>
-                <Checkbox onclick={handler} text="Glace" value='4'/>
-                <Checkbox onclick={handler} text="Fruits" value='8'/>
-                <Checkbox onclick={handler} text="Boisson" value='7'/>
+                <Checkbox  name='category' onclick={handler} text="Pizza" value='1'/>
+                <Checkbox  name='category' onclick={handler} text="Burger" value='2'/>
+                <Checkbox  name='category' onclick={handler} text="Cafe" value='3'/>
+                <Checkbox  name='category' onclick={handler} text="Snack" value='9'/>
+                <Checkbox  name='category' onclick={handler} text="Glace" value='4'/>
+                <Checkbox  name='category' onclick={handler} text="Fruits" value='8'/>
+                <Checkbox  name='category' onclick={handler} text="Boisson" value='7'/>
                 </div>
             <div className="mt-5 col-3 mx-auto">
                 <Button onclick={submit} text="Ajouter" type="primary"/>

@@ -29,9 +29,10 @@ export default function NewCashier ()
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(submittedData)
         };
-        fetch("http://localhost:3500/POST/Product/add-product.php", requestOptions)
+        fetch("http://localhost/cashier-app/src/Api/POST/users/add-users.php", requestOptions)
         .then(response => response.json())
         .then(data => console.log(data));
+        document.querySelector(".modal-content h2").style.textContent="Un nouveau caissier a ajouté "
         document.querySelector(".modal-content").style.display="flex"
     }
 
@@ -48,13 +49,11 @@ export default function NewCashier ()
                 <Input  onblur={handler} name="password" label="Mot De Passe" type="password"/>            
             </div>
                 <div className='mt-5'>
-                <Checkbox onclick={handler} text="Admin" value='1'/>
-                <Checkbox onclick={handler} text="User" value='0'/>
+                <Checkbox name='status' onclick={handler} text="Admin" value='1'/>
+                <Checkbox name='status' onclick={handler} text="User" value='0'/>
                 </div>
             <div className="mt-5 col-3 mx-auto">
-                <Button onclick={()=>{
-                    console.log(submittedData)
-                }} text="Ajouter" type="primary"/>
+                <Button onclick={submit} text="Ajouter" type="primary"/>
             </div>
         </>
     )   

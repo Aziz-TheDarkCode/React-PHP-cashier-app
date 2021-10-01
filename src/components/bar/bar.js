@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import "./bar.css"
 export default function Bar({state,value}) {
 

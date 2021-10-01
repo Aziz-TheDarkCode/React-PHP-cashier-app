@@ -3,9 +3,24 @@ import Button from "../../components/button/button";
 import NewCashier from "./addCashier/cashier";
 import {BrowserRouter as Router,Route,Link} from "react-router-dom";
 import Skeleton from "../../components/skeleton/skeleton";
+import { useEffect } from "react";
+import { useState } from "react/cjs/react.development";
 
 export default function Settings({cart,setCart}) 
 {
+    const [cashiers,setCashiers] = useState([])
+    useEffect(()=>{
+        setTimeout(() => {
+            fetch('http://localhost/cashier-app/src/Api/GET/users/all-users.php').then(
+                (res) => res.json()).then(
+                    (data) => {
+                        setCashiers(data)
+                        console.log(data)
+              }).catch((err)=>{
+                  console.log(err)
+              })
+           }, 1);    
+       },[])
     return(
         <Router>
             <Route path="/settings">
@@ -37,19 +52,77 @@ export default function Settings({cart,setCart})
                     <th></th>
                     <th>ID</th>
                     <th>Nom</th>
-                    <th>Date d'arrivée</th>
+                    <th>Statut</th>
                 </thead>
                 <tbody>
-                <tr className='p-5'>
-                    <td className="text-primary text-bolder"><AiOutlineDelete/></td>
-                    <td className="text-bolder">00246</td>
-                    <td>Samba Tine</td>
-                    <td>20-06-2020</td>
-                </tr>
-                {/* <tr className='p-5'>
-                   <Skeleton/>
-                </tr> */}
+                {cashiers.length !== 0 && cashiers.map(cashier=>{
+                        return(
+                            <tr className='p-5'>
 
+                                <td className='pointer text-primary text-bolder'><AiOutlineDelete/></td>
+                                <td>{cashier.userID}</td>
+                                <td>{cashier.users}</td>
+                                {cashier.status==0 && <td>Caissier</td>}
+                                {cashier.status==1 && <td>Admin</td>}
+                            </tr>
+                        )
+                    }) }
+                    {cashiers.length===0 && 
+                      <>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                        <tr>
+                            <Skeleton/>
+                        </tr>
+                      </>
+                    }
+                     
                 </tbody>
             </table>
             <Link to='/new-cashier'>

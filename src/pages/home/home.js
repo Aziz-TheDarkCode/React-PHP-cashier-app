@@ -9,11 +9,11 @@ import Loader from "../../components/loader/loader";
 export default function Home({recipes,setRecipes,cart,setCart,filteredRecipes,setFilteredRecipes}) {
     useEffect(()=>{
         setTimeout(() => {
-            fetch('./recipe.json').then(
+            fetch('http://localhost/cashier-app/src/Api/GET/Product/all-products.php').then(
                 (res) => res.json()).then(
                     (data) => {
-                        setRecipes(data.menu)
-                        setFilteredRecipes(data.menu)
+                        setRecipes(data)
+                        setFilteredRecipes(data)
                         console.log(data)
               }).catch((err)=>{
                   console.log(err)

@@ -8,7 +8,7 @@ import NewProduct from './addProduct/addProduct'
 export default function Dashboard ({recipes,setRecipes,cart,setCart}){
     useEffect(()=>{
         setTimeout(() => {
-            fetch('http://localhost:3500/GET/Product/all-products.php').then(
+            fetch('http://localhost/cashier-app/src/Api/GET/Product/all-products.php').then(
                 (res) => res.json()).then(
                     (data) => {
                         setRecipes(data)
