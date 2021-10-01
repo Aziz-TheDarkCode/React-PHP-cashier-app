@@ -5,7 +5,7 @@ import {BrowserRouter as Router,Route,Link} from "react-router-dom";
 import Skeleton from "../../components/skeleton/skeleton";
 import { useEffect } from "react";
 import { useState } from "react/cjs/react.development";
-
+import deleteRow from "../../utils";
 export default function Settings({cart,setCart}) 
 {
     const [cashiers,setCashiers] = useState([])
@@ -59,7 +59,7 @@ export default function Settings({cart,setCart})
                         return(
                             <tr className='p-5'>
 
-                                <td className='pointer text-primary text-bolder'><AiOutlineDelete/></td>
+                                <td onClick={deleteRow} className='pointer text-primary text-bolder deleteIcon'><AiOutlineDelete/></td>
                                 <td>{cashier.userID}</td>
                                 <td>{cashier.users}</td>
                                 {cashier.status==0 && <td>Caissier</td>}
