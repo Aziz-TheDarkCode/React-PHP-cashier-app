@@ -1,43 +1,31 @@
-# React-PHP-cashier-app
-Ceci est un projet de vente et de gestion de produits buildé avec PHP (Restful API) et dont la partie front a été implementé avec le React JS 
-# Informations
+This is a product sales and management school project built with PHP (Restful API) and whose front part has been implemented with React JS 
+# Information
 
-GROUPE : PR 215
 
 Abdou Aziz NDIAYE
 
-Yacine Diop SENE
+# How to clone the project
+
+After cloning the project first:
+
+- install all the dependencies of the project via the command npm install
+- import the cashier-app.sql database located in cashier-app/Dumped database using phpmyadmin
+- Then move the cashier-app folder in the xampp\htdocs folder
+- Then start the React development server with npm start
+- Enjoy the app
 
 
-# Comment cloner le projet
+# Technologies used
+- PHP: the backend of our project runs entirely on php, we used an oop architecture to make our project more robust, the connection files and the different classes are all done in php files so that we apply the DRY method in our project.
 
-Après avoir cloner le projet dabord :
+- MYSQL: MySQL database which is a fully managed database service for deploying cloud-native applications using the services...we used it in our project as the main database system, especially with mysqli, to perform all queries between the application via php to the database via MySQL
 
-- installer tout les dependencies du projet via la commande npm install
-- importer la base de donnée cashier-app.sql qui se trouve dans cashier-app/Dumped database en utilisant phpmyadmin
-- Ensuite deplacer le dossier cashier-app dans le dossier xampp\htdocs
-- Ensuite demarrer le serveur developpement  de React par npm start 
-- Profiter de l'application
-
-
-# Technologies utilisées
-- PHP : le backend de notre projet fonctionne entièrement sur php, nous avons utilisé une architecture oop pour rendre notre projet plus robuste, les fichiers de       connexion et les différentes classes sont tous faits dans des fichiers php afin que nous appliquions la méthode DRY dans notre projet.
-
-- MYSQL : Base de données MySQL qui est un service de base de données entièrement géré pour le déploiement d'applications cloud-native utilisant les services... nous l'avons utilisé dans notre projet comme système de base de données principal, notamment avec mysqli, pour effectuer toutes les requêtes entre l'application via php à la base de données via MySQL
-
-- React JS : la partie frontend de notre projet a carrément a été implenter avec la puissance library javascript a savoir le React JS.
-- CSS
+- React JS: the frontend part of our project has been implemented with the powerful javascript library, namely React JS.
+-CSS
 - yarn (package manager)
-- composer ( PHP dependency manager)
+- composer (PHP dependency manager)
 
-# Outils
-- VScode :  est l'un des principaux éditeurs de texte que nous avons utilisé dans ce projet, très pratique pour travailler sur plusieurs parties en même temps
-- GitHub - pour le contrôle de version pendant que nous travaillons en equipe
-- Adobe Xd : Pour des fins de conception et de modélisation
-
-
-
-
-
-
-
+# Tools
+- VScode: is one of the main text editors we used in this project, very practical to work on several parts at the same time
+- GitHub - for version control while we work as a team
+- Adobe Xd: For design and modeling purposes
