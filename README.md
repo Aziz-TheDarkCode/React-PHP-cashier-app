@@ -1,6 +1,6 @@
-This is a product sales and management school project built with PHP (Restful API) and whose front part has been implemented with React JS 
 # Information
 
+This is a product sales and management school project built with PHP (Restful API) and whose front part has been implemented with React JS 
 
 Abdou Aziz NDIAYE
 
